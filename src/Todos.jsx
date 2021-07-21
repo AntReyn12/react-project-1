@@ -14,12 +14,14 @@ const Todos = () => {
 
   return (
     <React.Fragment>
-      <h1 style={{color: "yellow"}}>TODO CARDS</h1>
       {todos ? (
-        <div style={{display: "flex", flexWrap: "wrap"}}>
-          {todos.map((todo) => (
-            <TodoCard todo={todo} />
-          ))}
+        <div>
+          <h1 style={{color: "yellow"}}>TODO CARDS</h1>
+          <div style={{display: "flex", flexWrap: "wrap"}}>
+            {todos.map((todo) => (
+              <TodoCard todo={todo} />
+            ))}
+          </div>
         </div>
       ) : (
         <CircularProgress />

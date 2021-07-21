@@ -7,7 +7,7 @@ const Todo = () => {
   const history = useHistory();
   const {id} = useParams();
 
-  const [todoDetails, setTodoDetails] = useState({});
+  const [todoDetails, setTodoDetails] = useState();
   useEffect(() => {
     axios
       .get(`https://jsonplaceholder.typicode.com/todos/${id}`)
@@ -17,14 +17,14 @@ const Todo = () => {
       });
   }, []);
 
-  const {id: todoId, userId, title, completed} = todoDetails;
+  const {id: todoId, userId, title, completed} = todoDetails || {};
   return (
     <div>
-      <button style={{margin: "15px"}} onClick={() => history.push("/")}>
-        Return to home
-      </button>
-      <div>
-        {todoDetails ? (
+      {todoDetails ? (
+        <div>
+          <button style={{margin: "15px"}} onClick={() => history.push("/")}>
+            Return to home
+          </button>
           <div
             style={{color: "black", backgroundColor: "yellow", padding: "15px"}}
           >
@@ -33,10 +33,10 @@ const Todo = () => {
             <h2>{`Todo title is: ${title}.`}</h2>
             <h2>{`Is todo completed? ${completed}.`}</h2>
           </div>
-        ) : (
-          <CircularProgress />
-        )}
-      </div>
+        </div>
+      ) : (
+        <CircularProgress />
+      )}
     </div>
   );
 };
