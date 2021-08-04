@@ -10,8 +10,15 @@ function App() {
       <header className="App-header">
         <Router>
           <Switch>
-            <Route exact path="/" children={<Todos />} />
-            <Route path="/todo/:id" children={<Todo />} />
+            <Route
+              exact
+              path="https://antreyn12.github.io/react-project-1/"
+              children={<Todos />}
+            />
+            <Route
+              path="https://antreyn12.github.io/react-project-1/todo/:id"
+              children={<Todo />}
+            />
           </Switch>
         </Router>
       </header>

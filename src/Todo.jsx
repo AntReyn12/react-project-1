@@ -22,7 +22,12 @@ const Todo = () => {
     <div>
       {todoDetails ? (
         <div>
-          <button style={{margin: "15px"}} onClick={() => history.push("/")}>
+          <button
+            style={{margin: "15px"}}
+            onClick={() =>
+              history.push("https://antreyn12.github.io/react-project-1/")
+            }
+          >
             Return to home
           </button>
           <div
