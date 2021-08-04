@@ -2,7 +2,7 @@
   "name": "example-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antreyn12.github.io/react-project-1/",
+  "homepage": "http://antreyn12.github.io/react-project-1/",
   "dependencies": {
     "@material-ui/core": "^4.12.2",
     "@testing-library/jest-dom": "^5.14.1",
